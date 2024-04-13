@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { FetchContacts } from "../apis/contacts"
+import React, { useState, useEffect } from "react";
+import { FetchContacts } from "../apis/contacts";
 import Contact from "../components/Contact";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [])
+  }, []);
 
   return (
     <div className="flex justify-center items-center w-full bg-gray-500">
@@ -29,16 +29,15 @@ const Home = () => {
             </p>
           </div>
           
-
           <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
-            {contacts.map((contact  ) => (
+            {contacts.map((contact) => (
               <Contact key={contact._id} contact={contact} />
             ))}
           </div>
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
