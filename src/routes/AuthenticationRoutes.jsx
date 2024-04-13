@@ -12,6 +12,7 @@ const AuthenticationRoutes = () => {
             <Routes>
                 <Route path="/" element={<Main />}>
                     <Route path="" element={<Home />} />
+                    <Route path="contact" element={<Contact />} />
                     <Route path="/:contactId" element={<ContactDetails />} />
                     <Route path="/update/:contactId" element={<UpdateContact />} />
                     <Route path="*" element={<ErrorPage />} />

@@ -1,29 +1,31 @@
-import { Link } from "react-router-dom";
-import { FaEye, FaEdit, FaTrash } from "react-icons/fa"; 
-const Contact = ({ contact }) => {
+import { Link } from "react-router-dom"
+import { FaEye } from "react-icons/fa";
+import { CiEdit } from "react-icons/ci";
+import { MdDelete } from "react-icons/md";
+const Contact = () => {
     return (
-          <section className='bg-black py-7 px-7 mb-3  flex flex-row gap-32'>
-            <div>
-             <h3>Name: {contact.fullName}</h3> 
-             <h3>Phone:{contact.phone}</h3>
-             <h3>Email: {contact.email}</h3>
+            <div className='bg-black py-7 px-7 mb-3  flex flex-row gap-32'>
+            <div className=''>
+             <h3>Name: {Contact.fullName}</h3>
+             <h3>Phone:{Contact.phone}</h3>
+             <h3>Email: {Contact.email}</h3>
             </div>
             <div className=' flex flex-col gap-3'>
-              <div className=''>
-                <Link to={`/contact/${contact._id}`} className=''><FaEye /></Link> {/* Corrected template literal */}
+            <div className=''>
+              <Link to="/:contactId" className=''><FaEye /></Link>
               </div>
               <div className=''>
-                <Link to={`/update/${contact._id}`} className=''><FaEdit /></Link> {/* Corrected template literal and using FaEdit */}
+              <Link to="/update/:contactId" className=''><CiEdit /></Link>
               </div>
               <div className=''>
-                <Link to={`/deleteContact/${contact._id}`} className=''><FaTrash /></Link> {/* Corrected template literal and using FaTrash */}
+              <Link to={'/deleteContact'} className=''><MdDelete /></Link>
               </div>
             </div>  
               
-         </section> 
+         </div> 
                         
     
     )
 }
 
-export default Contact;
+export default Contact
