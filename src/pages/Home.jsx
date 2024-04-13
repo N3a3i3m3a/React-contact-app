@@ -28,10 +28,11 @@ const Home = () => {
               quibusdam, quos fuga minima.
             </p>
           </div>
+          
 
-          <div className="">
-            {contacts.map((contact) => (
-              <Contact />
+          <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
+            {contacts.map((contact  ) => (
+              <Contact key={contact._id} contact={contact} />
             ))}
           </div>
         </div>
