@@ -48,7 +48,7 @@ const ContactDetails = () => {
   return (
     <section className="bg-gray-500 p-4 md:p-8 lg:p-12 ">
       <div className="mx-auto max-w-lg text-center">
-                <h1 className="text-2xl font-bold sm:text-3xl">Edit Contact</h1>
+                <h1 className="text-2xl font-bold sm:text-3xl">Contact Details</h1>
                 <p className="mt-4 text-white">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
                   ipsa culpa autem, at itaque nostrum!

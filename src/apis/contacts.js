@@ -14,7 +14,7 @@ export const FetchContacts = () => {
         })
         .catch((err) => {
             console.log(err);
-            throw err;
+            throw err;z
         });
 };
 
